@@ -12,6 +12,7 @@ RTREEMBR rects[] = {
 };
 
 
+
 int nrects = sizeof(rects) / sizeof(rects[0]);
 RTREEMBR search_rect = {
 	{ 6, 4, 0, 10, 6, 0 }   /* search will find above rects that this one overlaps */
