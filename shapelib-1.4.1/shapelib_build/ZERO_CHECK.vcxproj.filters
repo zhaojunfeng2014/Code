@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="F:\Code\shapelib-1.4.1\shapelib_build\CMakeFiles\a77a6e6b9d471727e6a28ae0868283c3\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{2D24F18F-2F04-3692-8E80-5CB5F6E03783}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

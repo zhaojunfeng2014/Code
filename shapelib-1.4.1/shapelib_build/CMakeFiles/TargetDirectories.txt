@@ -1,0 +1,12 @@
+F:/Code/shapelib-1.4.1/shapelib_build/CMakeFiles/dbfadd.dir
+F:/Code/shapelib-1.4.1/shapelib_build/CMakeFiles/shp.dir
+F:/Code/shapelib-1.4.1/shapelib_build/CMakeFiles/shpcreate.dir
+F:/Code/shapelib-1.4.1/shapelib_build/CMakeFiles/dbfdump.dir
+F:/Code/shapelib-1.4.1/shapelib_build/CMakeFiles/shprewind.dir
+F:/Code/shapelib-1.4.1/shapelib_build/CMakeFiles/shpadd.dir
+F:/Code/shapelib-1.4.1/shapelib_build/CMakeFiles/shpdump.dir
+F:/Code/shapelib-1.4.1/shapelib_build/CMakeFiles/dbfcreate.dir
+F:/Code/shapelib-1.4.1/shapelib_build/CMakeFiles/shptreedump.dir
+F:/Code/shapelib-1.4.1/shapelib_build/CMakeFiles/INSTALL.dir
+F:/Code/shapelib-1.4.1/shapelib_build/CMakeFiles/ALL_BUILD.dir
+F:/Code/shapelib-1.4.1/shapelib_build/CMakeFiles/ZERO_CHECK.dir
