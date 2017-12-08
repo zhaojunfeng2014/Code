@@ -81,6 +81,7 @@ namespace SpatialIndex
 			virtual bool isIndexValid();
 			virtual void getStatistics(IStatistics** out) const;
 			virtual void flush();
+			void OutPutRTree(std::string fileName);
 
 		private:
 			void initNew(Tools::PropertySet&);

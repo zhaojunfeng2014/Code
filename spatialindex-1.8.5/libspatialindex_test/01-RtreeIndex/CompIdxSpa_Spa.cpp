@@ -207,8 +207,24 @@ public:
 			low[1] = pObj->dfYMin;
 			high[0] = pObj->dfXMax;
 			high[1] = pObj->dfYMax;
+
+			int nPointCnt = pObj->nVertices;
+			double* pVertics = new double[3 * nPointCnt];
+			for (int i = 0; i < nPointCnt; i++)
+			{
+				pVertics[3 * i] = pObj->padfX[i];
+				pVertics[3 * i + 1] = pObj->padfY[i];
+				pVertics[3 * i + 2] = pObj->padfY[i];
+			}
+
 			Region r(low, high, 2);
-			m_pNext = new RTree::Data(0, NULL, r, m_iCursor);
+
+			//m_pNext = new RTree::Data(3 * nPointCnt * sizeof(double) + 1, (byte*)pVertics, r, m_iCursor); //会坐标数据复制数据
+			//m_pNext = new RTree::Data(0, NULL, r, m_iCursor); //会坐标数据复制数据
+			m_pNext = new RTree::Data(3 * nPointCnt * sizeof(double), (byte*)pVertics, r, m_iCursor); //会坐标数据复制数据
+
+
+			delete[] pVertics;
 			SHPDestroyObject(pObj);
 		}
 		++m_iCursor;

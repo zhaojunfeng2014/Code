@@ -3,11 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IndexCompare", "IndexCompare.vcxproj", "{97C76684-B114-41E9-ADE4-997483D4F635}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "02-RtreeIndex", "01-RtreeIndex\01-RtreeIndex.vcxproj", "{FFBC00AC-CE4E-4CA8-9F48-279B17322985}"
+	ProjectSection(ProjectDependencies) = postProject
+		{38FBBD59-8344-4D8E-B728-3D51763B6A70} = {38FBBD59-8344-4D8E-B728-3D51763B6A70}
+	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "01-RtreeIndex", "..\01-RtreeIndex\01-RtreeIndex.vcxproj", "{FFBC00AC-CE4E-4CA8-9F48-279B17322985}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "03-IndexCompare", "IndexCompare\IndexCompare.vcxproj", "{97C76684-B114-41E9-ADE4-997483D4F635}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "spatialindex-vc", "..\..\libspatialindex\spatialindex-vc\spatialindex.vcxproj", "{38FBBD59-8344-4D8E-B728-3D51763B6A70}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "01-spatialindex-vc", "..\libspatialindex\spatialindex-vc\spatialindex.vcxproj", "{38FBBD59-8344-4D8E-B728-3D51763B6A70}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,13 +20,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{97C76684-B114-41E9-ADE4-997483D4F635}.Debug|x64.ActiveCfg = Debug|x64
-		{97C76684-B114-41E9-ADE4-997483D4F635}.Debug|x86.ActiveCfg = Debug|Win32
-		{97C76684-B114-41E9-ADE4-997483D4F635}.Debug|x86.Build.0 = Debug|Win32
-		{97C76684-B114-41E9-ADE4-997483D4F635}.Release|x64.ActiveCfg = Release|x64
-		{97C76684-B114-41E9-ADE4-997483D4F635}.Release|x64.Build.0 = Release|x64
-		{97C76684-B114-41E9-ADE4-997483D4F635}.Release|x86.ActiveCfg = Release|Win32
-		{97C76684-B114-41E9-ADE4-997483D4F635}.Release|x86.Build.0 = Release|Win32
 		{FFBC00AC-CE4E-4CA8-9F48-279B17322985}.Debug|x64.ActiveCfg = Debug|x64
 		{FFBC00AC-CE4E-4CA8-9F48-279B17322985}.Debug|x64.Build.0 = Debug|x64
 		{FFBC00AC-CE4E-4CA8-9F48-279B17322985}.Debug|x86.ActiveCfg = Debug|Win32
@@ -32,6 +28,13 @@ Global
 		{FFBC00AC-CE4E-4CA8-9F48-279B17322985}.Release|x64.Build.0 = Release|x64
 		{FFBC00AC-CE4E-4CA8-9F48-279B17322985}.Release|x86.ActiveCfg = Release|Win32
 		{FFBC00AC-CE4E-4CA8-9F48-279B17322985}.Release|x86.Build.0 = Release|Win32
+		{97C76684-B114-41E9-ADE4-997483D4F635}.Debug|x64.ActiveCfg = Debug|x64
+		{97C76684-B114-41E9-ADE4-997483D4F635}.Debug|x86.ActiveCfg = Debug|Win32
+		{97C76684-B114-41E9-ADE4-997483D4F635}.Debug|x86.Build.0 = Debug|Win32
+		{97C76684-B114-41E9-ADE4-997483D4F635}.Release|x64.ActiveCfg = Release|x64
+		{97C76684-B114-41E9-ADE4-997483D4F635}.Release|x64.Build.0 = Release|x64
+		{97C76684-B114-41E9-ADE4-997483D4F635}.Release|x86.ActiveCfg = Release|Win32
+		{97C76684-B114-41E9-ADE4-997483D4F635}.Release|x86.Build.0 = Release|Win32
 		{38FBBD59-8344-4D8E-B728-3D51763B6A70}.Debug|x64.ActiveCfg = Debug|x64
 		{38FBBD59-8344-4D8E-B728-3D51763B6A70}.Debug|x64.Build.0 = Debug|x64
 		{38FBBD59-8344-4D8E-B728-3D51763B6A70}.Debug|x86.ActiveCfg = Debug|Win32

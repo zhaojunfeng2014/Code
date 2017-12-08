@@ -214,6 +214,9 @@ SpatialIndex::ISpatialIndex* SpatialIndex::RTree::createAndBulkLoadNewRTree(
 		break;
 	}
 
+	//建立Rtree以后输出
+	OutPutRTree(fileName);
+
 	return tree;
 }
 
@@ -812,6 +815,51 @@ void SpatialIndex::RTree::RTree::getStatistics(IStatistics** out) const
 void SpatialIndex::RTree::RTree::flush()
 {
 	storeHeader();
+}
+
+void SpatialIndex::RTree::RTree::OutPutRTree(std::string fileName)
+{
+	std::stack<NodePtr> st; //用栈遍历树
+	NodePtr root = readNode(m_rootID);
+
+	if (!root)
+	{
+		return; //空树
+	}
+	st.push(root);
+
+	while (!st.empty())
+	{
+		NodePtr n = st.top(); st.pop();
+		n->m_pData;
+
+		if (n->m_level == 0) //叶子结点
+		{
+			for (uint32_t cChild = 0; cChild < n->m_children; ++cChild)
+			{
+				bool b;
+				if (type == ContainmentQuery) b = query.containsShape(*(n->m_ptrMBR[cChild]));
+				else b = query.intersectsShape(*(n->m_ptrMBR[cChild]));
+
+				if (b)
+				{
+					Data data = Data(n->m_pDataLength[cChild], n->m_pData[cChild], *(n->m_ptrMBR[cChild]), n->m_pIdentifier[cChild]);
+					v.visitData(data);
+					++(m_stats.m_u64QueryResults);
+				}
+			}
+		}
+		else
+		{
+			//v.visitNode(*n);
+
+			for (uint32_t cChild = 0; cChild < n->m_children; ++cChild)
+			{
+				if (query.intersectsShape(*(n->m_ptrMBR[cChild]))) st.push(readNode(n->m_pIdentifier[cChild]));
+			}
+		}
+	}
+}
 }
 
 void SpatialIndex::RTree::RTree::initNew(Tools::PropertySet& ps)

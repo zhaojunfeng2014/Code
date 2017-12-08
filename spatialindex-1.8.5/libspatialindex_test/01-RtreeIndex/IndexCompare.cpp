@@ -33,8 +33,8 @@ int main(int argc, char* argv[])
 	//MULTITEST(TestGeos_2(),5);
 
 	//MULTITEST(TestSpa_1(),5);
-	MULTITEST(TestSpa_2(), 5);
-	//MULTITEST(TestSpa_3(),5);
+	//MULTITEST(TestSpa_2(), 5);
+	MULTITEST(TestSpa_3(),1);
 
 	fclose(g_pLog_Spa);
 	fclose(g_pLog_Att);
